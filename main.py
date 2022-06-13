@@ -29,10 +29,11 @@ while playing:
 
     CPU_action = random.choice(game_options)          
 
-    print(f"\nPlayer({player_action}), CPU({CPU_action})\n")
+    print(f"\nPlayer({player_action}) : CPU({CPU_action})\n")
 
     if player_action == CPU_action:
         print(f"Both players chose {player_action}. It's a tie!\n")
+        continue
 
     elif user_input == "r":
         if CPU_action == "scissor":
@@ -56,7 +57,7 @@ while playing:
     choice = input("Play again? (y/n): ").lower()
     if choice =="y":
         pass
-        
+    
     if choice == "n": 
         playing = False
         print("Thanks for playing, bye!")
